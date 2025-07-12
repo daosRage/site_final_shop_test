@@ -1,0 +1,150 @@
+html{
+    width: 100%;
+}
+body{
+    width: 100%;
+    margin: 0px;
+}
+
+header{
+    height: 100px;
+    background-color: #EA3F00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 5%;
+    box-sizing: border-box;
+}
+.logo-container{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo-container img{
+    width: 80px;
+    height: 80px
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    width: 50%;
+}
+.menu a{
+    text-decoration: none;
+    color: #ffae00;
+
+}
+.basket{
+    display: flex;
+    align-items: center;
+}
+.count-buy{
+    position: relative;
+    left: 20px;
+    font-size: 20px;
+    color: #ffae00;
+}
+
+.basket img{
+    width: 50px;
+    height: 50px
+}
+
+main{
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 300px;
+    box-sizing: border-box;
+}
+
+.catalog{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 300px;
+    height: 450px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+.product img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+.product-name{
+    font-size: 24px;
+}
+.product-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.product-price{
+    font-size: 26px;
+}
+.product-button{
+    display: inline-block;
+    background-color: #ffae00;
+    color: #EA3F00;
+    font-size: 20px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    height:fit-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+.basket-list{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    border: 2px solid rgb(35, 35, 35);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.basket-item{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+.basket-item img{
+    width: 50px;
+    height: 50px;
+}
+.delete{
+    background-image: url("image/img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 50px;
+
+}
