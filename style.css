@@ -148,3 +148,8 @@ main{
     height: 50px;
 
 }
+.delete-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
