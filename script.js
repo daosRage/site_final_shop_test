@@ -65,7 +65,8 @@ let countBuy = document.querySelector(".count-buy")
 let basket = document.querySelector(".basket")
 let basketList = document.querySelector(".basket-list")
 let delete_item = document.querySelector(".delete")
-let countPrice = 0
+let countPrice = document.querySelector("
+        
 
 
 basket.addEventListener("click", function() {
