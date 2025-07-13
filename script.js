@@ -65,7 +65,7 @@ let countBuy = document.querySelector(".count-buy")
 let basket = document.querySelector(".basket")
 let basketList = document.querySelector(".basket-list")
 let delete_item = document.querySelector(".delete")
-let countPrice = document.querySelector("
+let countPrice = document.querySelector(".sum-price")
         
 
 
@@ -75,6 +75,7 @@ basket.addEventListener("click", function() {
 if (delete_item){
     delete_item.addEventListener("click", function(){
         localStorage.clear()
+        countPrice.innerHTML = ""
         add_basket_buy()
     })
 }
@@ -89,7 +90,7 @@ function add_data(){
         <div class="product-name">${product_data[i]['name']}</div>
         <div class="product-about">${product_data[i]['about']}</div>
         <div class="product-list">
-            <p class="product-price">${product_data[i]['price']}</p>
+            <div class="product-price">${product_data[i]['price']} грн.</p>
             <a class="product-button">Купити</a>
         </div>
     </article>`
@@ -123,6 +124,7 @@ if (productButton.length != 0){
 
 function add_basket_buy(){
     basketList.innerHTML = ""
+    countPrice.innerHTML = ""
     if (localStorage.length == 0){
         basketList.innerHTML = "<h1>У вашому кошику пусто</h1>"
     } else{
@@ -134,9 +136,11 @@ function add_basket_buy(){
                                     <img src="${tempData["img"]}">
                                     <div class="basket-name-item">${tempData["name"]}</div>
                                     <div class="basket-count-item">${tempData["count"]}</div>
-                                    <div class="basket-count-price">${tempData["price"]}</div>
+                                    <div class="basket-count-price">${tempData["price"]} грн.</div>
                                 </article>`
-        }}
+                countPrice.innerText = +countPrice.innerText + tempData["price"]
+            }}
+        countPrice.innerText += " грн."
     }
 }     
 if (basketList){

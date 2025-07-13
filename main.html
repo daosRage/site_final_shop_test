@@ -23,15 +23,32 @@
         </header>
         
         <main>
-            <section class="catalog" id="catalog">
-                
-            </section>
+            <section class="catalog" id="catalog"></section>
+            <div id="sale"><img src="">ФОТКА АКЦІЇ АБО ПІЦИ</div>
+            <div id="about">ПРО НАС</div>
             
         </main>
         
         <footer>
             
+            <img src="image/img.png" width="50px" height="50px">
+            ФОТКА СОЦІАЛЬНИХ МЕРЕЖ
         </footer>
         <script src="script.js"></script>
+        <script>
+            let countBuy = document.querySelector(".count-buy")
+            if (localStorage.length == 0){
+                countBuy.innerHTML = ""
+            } else{
+                let count = 0
+                for (let key in localStorage){
+                    if (localStorage.hasOwnProperty(key)){
+                    let temp = JSON.parse(localStorage.getItem(key) || "{}")
+                    count += temp["count"]
+                }}
+                countBuy.innerText = count.toString()
+            }
+
+        </script>
     </body>
 </html>
